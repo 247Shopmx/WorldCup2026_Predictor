@@ -1,13 +1,14 @@
 
-name: Run World Cup 2026 Predictions
+name: Run World Cup 2026 Predictions and Optimization
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs every day at midnight
-  workflow_dispatch:      # Allows manual trigger
+    # Se ejecuta cada 3 horas comenzando a las 09:00 UTC
+    - cron: '0 9,12,15,18,21 * * *'
+  workflow_dispatch:
 
 jobs:
-  predict:
+  predict_and_optimize:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -21,13 +22,23 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run prediction script
-        run: python Prediction_models/predict_wc2026.py
+      - name: Check Odds and Predict Value
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: |
+          # Aquí se ejecutaría el script que compara predicciones vs cuotas reales
+          python Prediction_models/predict_wc2026.py --check-value
 
-      - name: Commit results
+      - name: Analyze Results and Adjust Weights
+        if: github.event.schedule == '0 21 * * *' # Solo al final del día
+        run: |
+          # Script para analizar aciertos del día y re-ajustar pesos de los modelos
+          python Prediction_models/optimize_weights.py
+
+      - name: Commit and Push Changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add made_predictions/*
-          git commit -m "Auto-update predictions" || echo "No changes to commit"
+          git add made_predictions/* models/*
+          git commit -m "Auto-update: Predictions & Model Optimization" || echo "No changes"
           git push
