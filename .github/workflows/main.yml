@@ -3,7 +3,6 @@ name: Run World Cup 2026 Predictions and Optimization
 
 on:
   schedule:
-    # Se ejecuta cada 3 horas comenzando a las 09:00 UTC
     - cron: '0 9,12,15,18,21 * * *'
   workflow_dispatch:
 
@@ -22,23 +21,19 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Check Odds and Predict Value
+      - name: Run Predictions
+        run: python Prediction_models/predict_wc2026.py
+
+      - name: Send Telegram Notification
         env:
-          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-        run: |
-          # Aquí se ejecutaría el script que compara predicciones vs cuotas reales
-          python Prediction_models/predict_wc2026.py --check-value
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python util_tools/telegram_notify.py
 
-      - name: Analyze Results and Adjust Weights
-        if: github.event.schedule == '0 21 * * *' # Solo al final del día
-        run: |
-          # Script para analizar aciertos del día y re-ajustar pesos de los modelos
-          python Prediction_models/optimize_weights.py
-
-      - name: Commit and Push Changes
+      - name: Commit and Push
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add made_predictions/* models/*
-          git commit -m "Auto-update: Predictions & Model Optimization" || echo "No changes"
+          git add .
+          git commit -m "Auto-update predictions & notifications" || echo "No changes"
           git push
