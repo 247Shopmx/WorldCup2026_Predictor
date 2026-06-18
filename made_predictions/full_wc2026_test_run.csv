@@ -1,0 +1,105 @@
+Home,Away,Home_Goals,Away_Goals,Resultado
+Mexico,South Africa,4,1,Gana Mexico
+South Korea,Czechia,4,2,Gana South Korea
+South Korea,Mexico,1,2,Gana Mexico
+Czechia,South Africa,3,1,Gana Czechia
+Czechia,Mexico,3,0,Gana Czechia
+South Africa,South Korea,1,2,Gana South Korea
+Canada,Bosnia and Herzegovina,7,2,Gana Canada
+Qatar,Switzerland,2,0,Gana Qatar
+Switzerland,Bosnia and Herzegovina,1,4,Gana Bosnia and Herzegovina
+Canada,Qatar,5,2,Gana Canada
+Switzerland,Canada,3,2,Gana Switzerland
+Bosnia and Herzegovina,Qatar,2,2,Empate
+Brazil,Morocco,6,3,Gana Brazil
+Haiti,Scotland,2,3,Gana Scotland
+Brazil,Scotland,4,2,Gana Brazil
+Morocco,Haiti,2,2,Empate
+Scotland,Brazil,3,4,Gana Brazil
+Morocco,Haiti,5,1,Gana Morocco
+USA,Paraguay,3,2,Gana USA
+Australia,Türkiye,0,1,Gana Türkiye
+USA,Australia,6,2,Gana USA
+Türkiye,Paraguay,3,3,Empate
+Türkiye,USA,1,1,Empate
+Paraguay,Australia,5,1,Gana Paraguay
+Germany,Curaçao,5,0,Gana Germany
+Ivory Coast,Ecuador,3,2,Gana Ivory Coast
+Germany,Ivory Coast,2,4,Gana Ivory Coast
+Ecuador,Curaçao,4,0,Gana Ecuador
+Ecuador,Germany,5,3,Gana Ecuador
+Curaçao,Ivory Coast,1,4,Gana Ivory Coast
+Netherlands,Japan,8,1,Gana Netherlands
+Sweden,Tunisia,1,1,Empate
+Netherlands,Sweden,2,3,Gana Sweden
+Tunisia,Japan,2,2,Empate
+Japan,Sweden,7,1,Gana Japan
+Tunisia,Netherlands,1,3,Gana Netherlands
+Belgium,Egypt,1,3,Gana Egypt
+Iran,New Zealand,3,1,Gana Iran
+Belgium,Iran,3,3,Empate
+New Zealand,Egypt,5,1,Gana New Zealand
+Egypt,Iran,2,1,Gana Egypt
+New Zealand,Belgium,0,0,Empate
+Spain,Cape Verde,1,0,Gana Spain
+Saudi Arabia,Uruguay,1,1,Empate
+Spain,Saudi Arabia,2,0,Gana Spain
+Uruguay,Cape Verde,2,0,Gana Uruguay
+Cape Verde,Saudi Arabia,0,1,Gana Saudi Arabia
+Uruguay,Spain,3,4,Gana Spain
+France,Senegal,4,1,Gana France
+Iraq,Norway,0,3,Gana Norway
+France,Iraq,5,0,Gana France
+Norway,Senegal,2,2,Empate
+Norway,France,3,1,Gana Norway
+Senegal,Iraq,2,3,Gana Iraq
+Argentina,Algeria,3,4,Gana Algeria
+Austria,Jordan,3,3,Empate
+Argentina,Austria,1,4,Gana Austria
+Jordan,Algeria,3,0,Gana Jordan
+Algeria,Austria,1,2,Gana Austria
+Jordan,Argentina,5,1,Gana Jordan
+Portugal,DR Congo,1,1,Empate
+Uzbekistan,Colombia,0,2,Gana Colombia
+Portugal,Uzbekistan,7,2,Gana Portugal
+Colombia,DR Congo,3,2,Gana Colombia
+Colombia,Portugal,2,5,Gana Portugal
+DR Congo,Uzbekistan,0,1,Gana Uzbekistan
+England,Croatia,2,1,Gana England
+Ghana,Panama,0,0,Empate
+England,Ghana,3,0,Gana England
+Croatia,Panama,4,1,Gana Croatia
+Panama,England,1,3,Gana England
+Croatia,Ghana,0,1,Gana Ghana
+1A,2B,1,0,Gana 1A
+1B,2A,1,0,Gana 1B
+1C,2D,2,0,Gana 1C
+1D,2C,2,1,Gana 1D
+1E,2F,3,0,Gana 1E
+1F,2E,5,0,Gana 1F
+1G,2H,0,0,Empate
+1H,2G,0,1,Gana 2G
+1I,2J,1,1,Empate
+1J,2I,2,0,Gana 1J
+1K,2L,1,0,Gana 1K
+1L,2K,1,0,Gana 1L
+Best 3rd #1,Best 3rd #2,2,3,Gana Best 3rd #2
+Best 3rd #3,Best 3rd #4,1,1,Empate
+Best 3rd #5,Best 3rd #6,1,2,Gana Best 3rd #6
+Best 3rd #7,Best 3rd #8,0,0,Empate
+R32 W1,R32 W2,1,0,Gana R32 W1
+R32 W3,R32 W4,4,4,Empate
+R32 W5,R32 W6,4,1,Gana R32 W5
+R32 W7,R32 W8,4,2,Gana R32 W7
+R32 W9,R32 W10,1,2,Gana R32 W10
+R32 W11,R32 W12,1,3,Gana R32 W12
+R32 W13,R32 W14,1,0,Gana R32 W13
+R32 W15,R32 W16,2,1,Gana R32 W15
+QF1,QF2,1,3,Gana QF2
+QF3,QF4,1,1,Empate
+QF5,QF6,1,3,Gana QF6
+QF7,QF8,0,0,Empate
+SF1,SF2,1,2,Gana SF2
+SF3,SF4,1,2,Gana SF4
+3rd Place,3rd Place,0,2,Gana 3rd Place
+Finalist 1,Finalist 2,1,2,Gana Finalist 2
