@@ -1,35 +1,32 @@
 import logging
 import os
-from typing import Optional
 
-class LoggerSetup:
-    @staticmethod
-    def setup_logger(
-        name: str,
-        log_file: str,
-        level: int = logging.INFO,
-        format_string: Optional[str] = None
-    ) -> logging.Logger:
-        """Configure and return a logger instance"""
-        if format_string is None:
-            format_string = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-
-        # Create log directory if it doesn't exist
-        os.makedirs(os.path.dirname(log_file), exist_ok=True)
-
-        # Create logger
-        logger = logging.getLogger(name)
-        logger.setLevel(level)
-
-        # Create file handler
-        file_handler = logging.FileHandler(log_file)
-        file_handler.setLevel(level)
-
+def setup_logging(name=None):
+    """Setup logging configuration"""
+    logger = logging.getLogger(name)
+    
+    if not logger.handlers:
+        # Create logs directory if it doesn't exist
+        os.makedirs('./logs', exist_ok=True)
+        
         # Create formatter
-        formatter = logging.Formatter(format_string)
+        formatter = logging.Formatter(
+            '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+        )
+        
+        # Create file handler
+        file_handler = logging.FileHandler('./logs/app.log')
+        file_handler.setLevel(logging.INFO)
         file_handler.setFormatter(formatter)
-
-        # Add handler to logger
+        
+        # Create console handler
+        console_handler = logging.StreamHandler()
+        console_handler.setLevel(logging.INFO)
+        console_handler.setFormatter(formatter)
+        
+        # Add handlers to logger
         logger.addHandler(file_handler)
-
-        return logger 
+        logger.addHandler(console_handler)
+        logger.setLevel(logging.INFO)
+    
+    return logger
